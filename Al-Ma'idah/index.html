@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>القرآن الكريم</title>
+  <link rel="stylesheet" href="styles.css">
+  <STYle>body {
+    font-family: "Amiri", serif;
+    background-color: #f8f5e9;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+  }
+  .quran-page {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    background: #fff;
+    border: 10px solid #d4c6a7;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    position: relative;
+  }
+  h1 {
+    font-size: 24px;
+    color: #444;
+    text-align: center;
+    margin: 10px 0;
+  }
+  .image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  img {
+    width: 90%;
+    max-width: 700px;
+    height: auto;
+    border: 2px solid #d4c6a7;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  footer {
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+    margin-top: 20px;
+  }</STYle>
+</head>
+<body>
+  <div class="quran-page">
+    <h1>القرآن الكريم<h1>
+    <div class="image-container" id="image-gallery"></div>
+  </div>
+  <footer>
+    <p>صفحة من القرآن الكريم</p>
+  </footer>
+
+  <script>
+    const totalImages = 52; // Total number of images
+    const imageGallery = document.getElementById("image-gallery");
+
+    for (let i = 1; i <= totalImages; i++) {
+      const imgElement = document.createElement("img");
+      imgElement.src = `Al-Ma'idah_${i}.jpg`;
+      imageGallery.appendChild(imgElement);
+    }
+  </script>
+</body>
+</html>
+
